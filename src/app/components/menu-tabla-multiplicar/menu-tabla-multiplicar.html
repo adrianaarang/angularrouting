@@ -1,0 +1,7 @@
+<h2>Elige una tabla</h2>
+<ul>
+  @for (num of numeros; track $index) {
+    <li><a [routerLink]="['/tabla', num]">Tabla del {{ num }}</a></li>
+  }
+</ul>
+<button (click)="generarAleatorios()">Otros números</button>

@@ -1,0 +1,13 @@
+<h1>Doble de número</h1>
+
+@for (num of numeros; track num) {
+  <a [routerLink]="['/doble', num]">Doble {{ num }}</a> |
+}
+
+@if (numero != null) {
+  <h2 style="color: blue;">El doble de {{ numero }} es {{ doble }}</h2>
+} @else {
+  <h2 style="color: red;">No hemos recibido el parámetro</h2>
+}
+
+<button (click)="gotoHome()">Volver a Home</button>

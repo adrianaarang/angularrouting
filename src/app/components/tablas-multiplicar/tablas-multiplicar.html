@@ -1,0 +1,16 @@
+<app-menu-tabla-multiplicar></app-menu-tabla-multiplicar>
+
+<h1>Tabla de multiplicar</h1>
+
+@if (numero != null) {
+  <h2>Tabla del {{ numero }}</h2>
+  <ul>
+    @for (resultado of numeros; track $index) {
+      <li>{{ numero }} x {{ $index + 1 }} = {{ resultado }}</li>
+    }
+  </ul>
+} @else {
+  <h2 style="color: red;">No hemos recibido el parámetro</h2>
+}
+
+<button (click)="gotoHome()">Volver a Home</button>
